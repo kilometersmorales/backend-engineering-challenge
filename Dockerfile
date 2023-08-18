@@ -4,5 +4,4 @@ COPY . .
 RUN go mod download
 RUN go build -o unbabel .
 RUN chmod +x unbabel
-#CMD ./unbabelapp
-ENTRYPOINT ["./unbabel", "-d", "--window_size", "10"]
+CMD ./unbabel --window_size 10
